@@ -8,8 +8,13 @@
 
 #import "CalculatorViewController.h"
 
-@interface CalculatorViewController ()
+typedef NS_ENUM(NSUInteger, Operator) {CalcOperatorPlus, CalcOperatorMinus, CalcOperatorMultiply, CalcOperatorDivide};
 
+@interface CalculatorViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *DisplayLabel;
+@property Operator selectedOperator;
+@property long long firstNumber;
+@property BOOL displayShouldReset;
 @end
 
 @implementation CalculatorViewController
@@ -37,8 +42,46 @@
 
 
 - (IBAction)didPressNumber:(UIButton *)sender {
-    int inuputNumber = sender.titleLabel.text.intValue;
-    NSLog(@"%d", inuputNumber);
+    if (_displayShouldReset) {
+        _displayShouldReset = NO;
+        _DisplayLabel.text = sender.titleLabel.text;
+    }
+    else {
+        if ([_DisplayLabel.text isEqualToString:@"0"]) {
+            _DisplayLabel.text = @"";
+        }
+        _DisplayLabel.text = [_DisplayLabel.text stringByAppendingString:sender.titleLabel.text];
+    }
 }
+
+- (IBAction)didSelectOperation:(UIButton *)sender {
+    if ([sender.titleLabel.text isEqualToString:@"+"]) {
+        _selectedOperator = CalcOperatorPlus;
+    }
+    else if ([sender.titleLabel.text isEqualToString:@"-"]) {
+        _selectedOperator = CalcOperatorMinus;
+    }
+    else if ([sender.titleLabel.text isEqualToString:@"*"]) {
+        _selectedOperator = CalcOperatorMultiply;
+    }
+    else if ([sender.titleLabel.text isEqualToString:@"/"]) {
+        _selectedOperator = CalcOperatorDivide;
+    }
+    
+    _displayShouldReset = YES;
+    
+    _firstNumber = _DisplayLabel.text.longLongValue;
+}
+
+- (IBAction)didSelectClear:(id)sender {
+    _displayShouldReset = NO;
+    _firstNumber = 0;
+    _DisplayLabel.text = @"0";
+}
+
+- (IBAction)didSelectEquals:(id)sender {
+    
+}
+
 
 @end
