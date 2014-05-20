@@ -7,6 +7,7 @@
 //
 
 #import "CalculatorViewController.h"
+#import "Calculator.h"
 
 typedef NS_ENUM(NSUInteger, Operator) {CalcOperatorPlus, CalcOperatorMinus, CalcOperatorMultiply, CalcOperatorDivide};
 
@@ -80,7 +81,10 @@ typedef NS_ENUM(NSUInteger, Operator) {CalcOperatorPlus, CalcOperatorMinus, Calc
 }
 
 - (IBAction)didSelectEquals:(id)sender {
-    
+    //Do addition
+    if (_selectedOperator == CalcOperatorPlus) {
+        _DisplayLabel.text = [NSString stringWithFormat:@"%lld", [Calculator plus:_firstNumber secondNumber:_DisplayLabel.text.longLongValue]];
+    }
 }
 
 

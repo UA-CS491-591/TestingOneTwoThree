@@ -18,10 +18,10 @@
 		1FBCE225192A3F6E0065E3BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FBCE20A192A3F6E0065E3BB /* Foundation.framework */; };
 		1FBCE226192A3F6E0065E3BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FBCE20E192A3F6E0065E3BB /* UIKit.framework */; };
 		1FBCE22E192A3F6E0065E3BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FBCE22C192A3F6E0065E3BB /* InfoPlist.strings */; };
-		1FBCE230192A3F6E0065E3BB /* TestingOneTwoThreeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBCE22F192A3F6E0065E3BB /* TestingOneTwoThreeTests.m */; };
 		1FBCE23B192A3F870065E3BB /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBCE23A192A3F870065E3BB /* Calculator.m */; };
 		1FBCE240192A3FBA0065E3BB /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBCE23E192A3FBA0065E3BB /* CalculatorViewController.m */; };
 		1FBCE241192A3FBA0065E3BB /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FBCE23F192A3FBA0065E3BB /* CalculatorViewController.xib */; };
+		862D5E9C192A494500E3830A /* CalculatorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D5E9B192A494500E3830A /* CalculatorTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,12 +50,12 @@
 		1FBCE223192A3F6E0065E3BB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1FBCE22B192A3F6E0065E3BB /* TestingOneTwoThreeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestingOneTwoThreeTests-Info.plist"; sourceTree = "<group>"; };
 		1FBCE22D192A3F6E0065E3BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1FBCE22F192A3F6E0065E3BB /* TestingOneTwoThreeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestingOneTwoThreeTests.m; sourceTree = "<group>"; };
 		1FBCE239192A3F870065E3BB /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
 		1FBCE23A192A3F870065E3BB /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 		1FBCE23D192A3FBA0065E3BB /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
 		1FBCE23E192A3FBA0065E3BB /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
 		1FBCE23F192A3FBA0065E3BB /* CalculatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
+		862D5E9B192A494500E3830A /* CalculatorTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorTestCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +140,8 @@
 		1FBCE229192A3F6E0065E3BB /* TestingOneTwoThreeTests */ = {
 			isa = PBXGroup;
 			children = (
-				1FBCE22F192A3F6E0065E3BB /* TestingOneTwoThreeTests.m */,
 				1FBCE22A192A3F6E0065E3BB /* Supporting Files */,
+				862D5E9B192A494500E3830A /* CalculatorTestCase.m */,
 			);
 			path = TestingOneTwoThreeTests;
 			sourceTree = "<group>";
@@ -272,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FBCE230192A3F6E0065E3BB /* TestingOneTwoThreeTests.m in Sources */,
+				862D5E9C192A494500E3830A /* CalculatorTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +461,7 @@
 				1FBCE235192A3F6E0065E3BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1FBCE236192A3F6E0065E3BB /* Build configuration list for PBXNativeTarget "TestingOneTwoThreeTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +470,7 @@
 				1FBCE238192A3F6E0065E3BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

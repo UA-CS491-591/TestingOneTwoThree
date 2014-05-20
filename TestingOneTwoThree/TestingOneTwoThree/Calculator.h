@@ -10,4 +10,5 @@
 
 @interface Calculator : NSObject
 
++(long long)plus:(long long)firstNumber secondNumber:(long long)secondNumber;
 @end

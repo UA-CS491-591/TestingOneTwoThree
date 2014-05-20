@@ -10,4 +10,7 @@
 
 @implementation Calculator
 
++(long long)plus:(long long)firstNumber secondNumber:(long long)secondNumber{
+    return firstNumber + secondNumber;
+}
 @end
